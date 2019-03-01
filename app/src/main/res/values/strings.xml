@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LiveStyled</string>
+    <string name="tab_text_1">Events</string>
+    <string name="tab_text_2">Favorite</string>
+    <string name="title_event">Title</string>
+    <string name="location_event">Location</string>
+    <string name="time_event">Time</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginBottom="@dimen/medium_margin"
+                                             android:layout_marginTop="@dimen/medium_margin"
+                                             android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/high_margin"
+        android:layout_marginEnd="@dimen/low_margin"
+        android:layout_marginTop="@dimen/high_margin"
+        android:background="@drawable/list_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="@dimen/medium_high_margin"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cntContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/high_margin"
+        android:layout_marginStart="@dimen/high_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:paddingBottom="@dimen/medium_high_margin"
+        android:paddingTop="@dimen/medium_high_margin"
+        app:layout_constraintEnd_toEndOf="@+id/viewBackground"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/viewBackground">
+
+        <TextView
+            android:id="@+id/title_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_event"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cntContent"/>
+
+        <TextView
+            android:id="@+id/title_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location_event"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintTop_toBottomOf="@id/title_event"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_event"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintTop_toBottomOf="@id/title_venue"/>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/selectAllCbx"
+            style="@style/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/high_margin"
+            app:layout_constraintBaseline_toBaselineOf="@id/date"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
